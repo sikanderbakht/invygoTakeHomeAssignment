@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "name": "Alice",
+      "age": 20,
+      "dob": "1995-03-15",
+      "profession": "Employed",
+      "locality": "Downtown",
+      "guests": 1,
+      "address": "123 Main St, Apt 4A"
+    },
+    {
+      "name": "Bob",
+      "age": 16,
+      "dob": "2001-07-10",
+      "profession": "Student",
+      "locality": "Suburbia",
+      "guests": 0,
+      "address": "456 Elm Rd, Unit 7B"
+    },
+    {
+      "name": "Charlie",
+      "age": 35,
+      "dob": "1988-11-22",
+      "profession": "Employed",
+      "locality": "City Center",
+      "guests": 2,
+      "address": "789 Oak Ave, Suite 12"
+    },
+    {
+      "name": "David",
+      "age": 19,
+      "dob": "2004-02-03",
+      "profession": "Student",
+      "locality": "Suburbia",
+      "guests": 0,
+      "address": "101 Pine Ln, Apt 2C"
+    },
+    {
+      "name": "Eve",
+      "age": 30,
+      "dob": "1992-09-18",
+      "profession": "Employed",
+      "locality": "Uptown",
+      "guests": 1,
+      "address": "222 Maple Ave, Floor 5"
+    },
+    {
+      "name": "Frank",
+      "age": 45,
+      "dob": "1978-06-07",
+      "profession": "Employed",
+      "locality": "Downtown",
+      "guests": 2,
+      "address": "333 Cedar St, Suite 8D"
+    },
+    {
+      "name": "Grace",
+      "age": 29,
+      "dob": "1994-12-30",
+      "profession": "Employed",
+      "locality": "City Center",
+      "guests": 0,
+      "address": "444 Birch Rd, Unit 3F"
+    },
+    {
+      "name": "Henry",
+      "age": 21,
+      "dob": "2002-05-25",
+      "profession": "Student",
+      "locality": "Suburbia",
+      "guests": 1,
+      "address": "555 Spruce Ln, Apt 1B"
+    },
+    {
+      "name": "Ivy",
+      "age": 27,
+      "dob": "1996-08-14",
+      "profession": "Employed",
+      "locality": "Uptown",
+      "guests": 0,
+      "address": "666 Willow Ave, Floor 3"
+    },
+    {
+      "name": "Jack",
+      "age": 32,
+      "dob": "1989-04-02",
+      "profession": "Employed",
+      "locality": "Downtown",
+      "guests": 2,
+      "address": "777 Oak St, Suite 6E"
+    }
+  ]
+}
