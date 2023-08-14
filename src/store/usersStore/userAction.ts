@@ -10,13 +10,11 @@ export function getMeetupUsersList() {
         payload: true,
       });
       const response: any = await apiManager.get(ApiUrls.GET_MEETUP_USER_LIST);
-      console.log('response' + JSON.stringify(response));
       dispatch({
         type: AppActionConst.ACTION_GET_USER_MEETUP_LIST_SUCCESS,
         payload: response,
       });
     } catch (error: any) {
-      console.log('error' + error);
       dispatch({
         type: AppActionConst.ACTION_GET_USER_MEETUP_LIST_ERROR,
         payload: error,

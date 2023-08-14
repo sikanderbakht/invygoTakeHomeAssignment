@@ -19,10 +19,6 @@ const ReportsScreen = () => {
   const averageGroupSize: number = calculateAverageGroupSize();
   const professionCounts = calculateProfessionCounts();
 
-  useEffect(() => {
-    console.log('ageRangeCounts: ' + JSON.stringify(ageRangeCounts));
-  }, [ageRangeCounts]);
-
   return (
     <ScrollView style={classes.container}>
       <View style={classes.card}>

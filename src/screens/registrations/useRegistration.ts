@@ -196,7 +196,6 @@ const useRegistration = () => {
   };
 
   const isFormEmpty = () => {
-    console.log('registrationData.name' + registrationData.name);
     return (
       registrationData.name === '' &&
       registrationData.age === '' &&

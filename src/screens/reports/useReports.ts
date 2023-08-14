@@ -19,7 +19,6 @@ const useReports = () => {
         ageRanges['25+']++;
       }
     });
-    console.log('ageRanges: ' + JSON.stringify(ageRanges));
     return ageRanges;
   };
 

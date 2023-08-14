@@ -14,7 +14,6 @@ const api = async (
     | 'stream',
   responseEncoding?: any,
 ) => {
-  console.log('url:' + url);
   return new Promise(async (resolve, reject) => {
     axios({
       url,
@@ -27,7 +26,6 @@ const api = async (
     })
       .then(
         response => {
-          console.log('responseasdasd' + JSON.stringify(response.data));
           resolve(response.data);
         },
         async error => {
@@ -40,7 +38,6 @@ const api = async (
                 error.response.data.status || error.response.data.statusCode,
             });
           } else {
-            console.log('error' + JSON.stringify(error));
             reject({
               apiError: true,
               code: 'API ERROR',

@@ -32,7 +32,6 @@ export function RegistrationReducer(
         registerUserSuccess: true,
       });
     case AppActionConst.ACTION_REGISTER_USER_ERROR:
-      console.log('yolo' + JSON.stringify(payload));
       return updateObject(state, {
         isLoading: false,
         registerUserError: true,

@@ -3,6 +3,10 @@ import useRegistration from '../useRegistration';
 import * as redux from 'react-redux';
 import {initialState} from '../../../store/registrationStore/registrationReducer';
 import {Alert} from 'react-native';
+import AppStore from '../../../store/index';
+import axios, {AxiosResponse} from 'axios';
+import {AppActionConst} from '../../../constants/actionConstants';
+import {registerUserForMeetup} from '../../../store/registrationStore/registrationAction';
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -23,6 +27,7 @@ spySelector.mockReturnValue({...initialState});
 const spyDispatcher = jest.spyOn(redux, 'useDispatch');
 const dispatchFunction = jest.fn();
 spyDispatcher.mockReturnValue(dispatchFunction);
+jest.mock('axios');
 describe('useRegistration', () => {
   test('handleNameChange updates name and errorName', () => {
     const {result} = renderHook(() => useRegistration());
@@ -127,6 +132,20 @@ describe('useRegistration', () => {
 
     expect(result.current.registrationData.numberOfGuests).toBe(newGuestCount);
     expect(result.current.registrationErrors.errorNumberOfGuests).toBe(false);
+  });
+
+  it('registerUserForMeetup success', async () => {
+    const mockedAxios = axios as jest.Mocked<typeof axios>;
+    const mockedResponse: AxiosResponse = {
+      data: {},
+      status: 200,
+      headers: {},
+      config: {},
+      statusText: 'OK',
+    };
+    (mockedAxios as any).mockResolvedValue(mockedResponse);
+    await AppStore.dispatch(registerUserForMeetup());
+    expect(AppStore.getState().registration.registerUserSuccess).toBeTruthy();
   });
 
   test('handleGuestChange updates errorNumberOfGuests when value is empty', () => {
